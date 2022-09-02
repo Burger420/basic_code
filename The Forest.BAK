@@ -1,0 +1,62 @@
+Rem Project: The Forest
+Rem Created: Thursday, September 01, 2022
+Rem ***** Main Source File *****P
+
+Print "Welcome to the Forest."
+
+Print "You are an adventurer traveling through the forest to find a golden mcguffin."
+
+Print "Go find It!"
+
+Print "Press ENTER to start."
+
+wait key
+
+cls
+
+value = 0
+
+Print "When you enter the forest, you see 3 paths."
+
+Print "One path is well lit, but overgrown,"
+
+Print "One path is totally normal,"
+
+Print "And one is dark, but immaculate."
+
+input "Option 1, 2, or 3? ";selection
+
+gosub points
+
+points:
+if selection = 1
+
+value = value + 1
+
+print "value =";value
+
+wait key
+
+endif
+
+if selection = 2
+
+value = value
+
+print "value =";value
+
+wait key
+
+endif
+
+if selection = 3
+
+value = value - 1
+
+print "value =";value
+
+endif
+
+wait key
+
+cls

@@ -1,0 +1,74 @@
+Rem Project: variable test
+Rem Created: Thursday, September 01, 2022
+
+Rem ***** Main Source File *****
+wrong = 1
+value = rnd(9)+1
+
+gosub guess
+  
+guess:
+
+input "guess a number between 1 and 10,! ";guess 
+
+gosub checkguess
+
+checkguess:
+
+if guess > value
+
+ wrong = wrong + 1
+ 
+ Print "Nope, that's too high. Guess again!"
+ 
+ wait key
+ 
+ cls
+ 
+ gosub guess
+ 
+ endif
+ 
+ if guess < value
+ 
+ wrong = wrong + 1
+ 
+ Print "Nope, that's too low. Guess again!"
+ 
+ wait key
+ 
+ cls
+ 
+ gosub guess
+ 
+ endif
+ 
+ if guess = value then gosub win
+ 
+ win:
+ if wrong > 1
+ 
+ Print "You Won!"
+ 
+ Print "It took you ";wrong;" Attempts"
+ 
+ Print "The answer was ";value;". Good Job!"
+ 
+ Print "Press enter to end program"
+ 
+ else 
+  Print "You Won!"
+ 
+ Print "It took you ";wrong;" Attempt"
+ 
+ Print "The answer was ";value;". Good Job!"
+ 
+ Print "Press enter to end program"
+ 
+endif
+ 
+ wait key
+ 
+ cls
+ 
+ end
